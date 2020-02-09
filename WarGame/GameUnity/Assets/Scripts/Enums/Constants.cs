@@ -16,6 +16,7 @@ public class Constants
 		public const string PLAYER = "PLAYER";
 		public const string GAMECONTROLLER = "GAMECONTROLLER";
 		public const string PLAYTILE = "PLAYTILE";
+		public const string CARD = "CARD";
 	}
 
 	public class Layers

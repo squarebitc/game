@@ -4,40 +4,5 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-		Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		Vector3 direction = Vector3.down * 100;
-		
-		if (Physics.Raycast(mousePosition, direction, out RaycastHit hit))
-		{
-			direction = Vector3.down * hit.distance;
-			Debug.DrawRay(mousePosition, direction, Color.yellow);
-			rayCastHit(hit);
-		}
-		else
-		{
-			Debug.DrawRay(mousePosition, direction, Color.white);
-		}
-	}
-
-	private void rayCastHit(RaycastHit hit)
-	{
-		switch (hit.collider.tag.ToUpper())
-		{
-			case Constants.Tags.PLAYTILE:
-				FieldTile colliderScript = hit.collider.gameObject.GetComponent<FieldTile>();
-				colliderScript.InvokeRayCast();
-				break;
-			default:
-				break;
-		}
-	}
+    
 }
