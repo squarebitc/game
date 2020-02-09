@@ -49,13 +49,15 @@ public class MouseBehaviour : MonoBehaviour
 	private void selectCard(RaycastHit card)
 	{
 		GameObject _card = card.collider.gameObject;
+		CardBehaviour cardScript = _card.GetComponent<CardBehaviour>();
 		if (Input.GetMouseButton(0))
 		{
-			_card.transform.SetParent(this.transform);
+			cardScript.DragCard(this.transform);
 		}
 		else
 		{
 			_card.transform.SetParent(null);
+			cardScript.ReleaseCard();
 		}
 	}
 }
