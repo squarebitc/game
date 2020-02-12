@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Table
-  m_Shader: {fileID: -6465566751694194690, guid: 72d4046a72a0b4746bfbd88750e343e2,
+  m_Shader: {fileID: -6465566751694194690, guid: e91ffae8f61003a40a5a6d331938dc6c,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,6 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -52,6 +56,7 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
+    - _ColorMask: 15
     - _Cull: 2
     - _Cutoff: 0.5
     - _DstBlend: 0
@@ -67,11 +72,19 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
     - _Surface: 0
+    - _UseUIAlphaClip: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - Color_36B04458: {r: 7.999999, g: 4.062827, b: 0, a: 0}
+    - Color_4B6A17DA: {r: 0.30188674, g: 0.18542877, b: 0.058383733, a: 1}
+    - Color_8D706426: {r: 0.41509426, g: 0.17311478, b: 0.001957997, a: 0}
     - Color_BB51839: {r: 0.18867916, g: 0.120872565, b: 0, a: 1}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
