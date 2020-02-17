@@ -30,23 +30,22 @@ public class PlayFieldManager : MonoBehaviour
 	private void generatePlayTiles(int xCount, int zCount)
 	{
 		float x = startPosition.x;
-		float z = startPosition.z;
 
 		for (int ix = 0; ix < xCount; ix++)
 		{
+			float z = startPosition.z;
 			GameObject xTile = Instantiate(tilePrefab);
 			xTile.transform.SetParent(this.transform);
 			xTile.transform.position = new Vector3(x, 0, z);
 			generatedTiles.Add(xTile);
 			for (int iz = 1; iz < zCount; iz++)
 			{
-				z += tileSpace;
+				z -= tileSpace;
 				GameObject yTile = Instantiate(tilePrefab);
 				yTile.transform.SetParent(this.transform);
 				yTile.transform.position = new Vector3(x, 0, z);
 				generatedTiles.Add(yTile);
 			}
-			z += tileSpace;
 			x += tileSpace;
 		}
 	}

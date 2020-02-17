@@ -225,6 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f2077ac5cf3c841b54d0c40220785f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPosition: {x: 0, y: 0, z: 0}
+  dragged: 0
 --- !u!1 &53482645
 GameObject:
   m_ObjectHideFlags: 0
