@@ -10,7 +10,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{9C59A61F-FEB9-52A3-55D4-224C10106B78}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -68,6 +69,7 @@
     <Compile Include="Assets\Scripts\FirstScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MouseBehaviour.cs" />
+    <Compile Include="Assets\Scripts\PlayFieldManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Y:/Projecten/SquareBitC/game/WarGame/GameUnity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
