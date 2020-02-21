@@ -39,10 +39,7 @@ public class MouseBehaviour : MonoBehaviour
 				colliderScript.InvokeRayCast();
 				break;
 			case Constants.Tags.CARD:
-				// Left mouse button click
-				if (Input.GetMouseButton(0))
-					selectCard(hit);
-				else hoverCard();
+				selectCard(hit);
 				break;
 			default:
 				break;
@@ -53,6 +50,7 @@ public class MouseBehaviour : MonoBehaviour
 	{
 		GameObject _card = card.collider.gameObject;
 		CardBehaviour cardScript = _card.GetComponent<CardBehaviour>();
+		cardScript.HoverCard();
 		if (Input.GetMouseButton(0))
 		{
 			cardScript.DragCard(this.transform);

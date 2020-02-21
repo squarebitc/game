@@ -9,6 +9,8 @@ public class CardBehaviour : MonoBehaviour
 	private Vector3 startPosition;
 	[SerializeField]
 	private bool dragged = false;
+	[SerializeField]
+	private GameObject cardGlow;
 	#endregion
 
 	#region Methods
@@ -22,6 +24,11 @@ public class CardBehaviour : MonoBehaviour
 	void Update()
 	{
 
+	}
+
+	public void HoverCard()
+	{
+		this.cardGlow.SetActive(true);
 	}
 
 	public void DragCard(Transform parent)
@@ -38,6 +45,7 @@ public class CardBehaviour : MonoBehaviour
 			playTileCheck();
 			dragged = false;
 		}
+		this.cardGlow.SetActive(false);
 	}
 
 	private void playTileCheck()
@@ -47,7 +55,11 @@ public class CardBehaviour : MonoBehaviour
 		if (Physics.Raycast(origin, direction, out RaycastHit hit))
 		{
 			if (hit.transform.tag.ToUpper() == Constants.Tags.PLAYTILE)
-				this.transform.position = hit.transform.position;
+			{
+				Vector3 newPosition = hit.transform.position;
+				newPosition.y = this.transform.position.y;
+				this.transform.position = newPosition;
+			}
 		}
 		else
 		{
